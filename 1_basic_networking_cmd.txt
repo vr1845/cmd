@@ -1,0 +1,17 @@
+1. ifconfig 
+
+2. ping 8.8.8.8
+
+3. netstat
+
+4. traceroute 8.8.8.8
+
+5. nslookup 8.8.8.8
+
+6. arp -v
+
+7. dig www.google.com
+
+8. route
+
+
