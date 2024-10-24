@@ -1,0 +1,19 @@
+EXP 8
+
+nmap -sS -Pn -f -F 192.168.0.111
+
+
+nmap -sS -Pn --data-length -F 64 192.168.0.111
+
+
+nmap -sS -Pn --ttl 1 192.168.0.111
+
+nmap -sS -Pn --badsum -F 192.168.0.111
+
+# sudo tcpdump -i eth0 -n -w capture.pcap
+
+tcpdump -r capture.pcap
+
+
+
+
