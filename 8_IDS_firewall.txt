@@ -1,14 +1,15 @@
-EXP 8
+Fragmenting the packets with 8 bit data
+nmap -sS -Pn -f -F 192.168.0.107
 
-nmap -sS -Pn -f -F 192.168.0.111
+Generating IP oackets with specific length
+nmap -sS -Pn --data-length 64 -F 192.168.0.107
 
+Manupulating TTL value
+nmap -sS -Pn --ttl 1 -F 192.168.0.107
+nmap -sS -Pn --ttl 81 -F 192.168.0.107
 
-nmap -sS -Pn --data-length -F 64 192.168.0.111
-
-
-nmap -sS -Pn --ttl 1 192.168.0.111
-
-nmap -sS -Pn --badsum -F 192.168.0.111
+Sending packets with bogus TCP/UDP checksums
+nmap -sS -Pn --badsum -F 192.168.0.107
 
 sudo tcpdump -i eth0 -n -w capture.pcap
 
